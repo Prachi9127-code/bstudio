@@ -5,10 +5,10 @@ $insert = false;
 $update = false;
 $delete = false;
 
-$servername = "localhost";
-$username = "root";
-$password = "";
-$database = "notes";
+$servername = "bstudio.mysql.database.azure.com";
+$username = "prachi";
+$password = "Pr@chi12a";
+$database = "sampledb";
 
 // Create a connection
 $conn = mysqli_connect($servername, $username, $password, $database);
