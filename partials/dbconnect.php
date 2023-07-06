@@ -2,7 +2,7 @@
 $servername = "bstudio-server.mysql.database.azure.com";
 $username = "prachi";
 $password ="Pr@chi12a";
-$database = "demodb";
+$database = "sampledb";
 
 
 $conn = mysqli_init();
