@@ -151,7 +151,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
             style="background-image: url(&quot;assets/img/hero.jpeg&quot;);background-position: center;background-size: cover;">
             <div class="d-flex flex-column justify-content-center align-items-center hero-content"
                 style="padding-left: 5px;padding-right: 15px;padding-bottom: 11px;padding-top: 10px;">
-                <form action="/Bstudio/index.php" method="post">
+                <form action="/index.php" method="post">
                     <h2>Add a Note</h2>
                     <div class="mb-3">
                         <label for="title">Note Title</label>
