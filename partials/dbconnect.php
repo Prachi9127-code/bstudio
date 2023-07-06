@@ -1,5 +1,5 @@
 <?php
-$servername = "bstudio-server.mysql.database.azure.com";
+$servername = "bstudio.mysql.database.azure.com";
 $username = "prachi";
 $password ="Pr@chi12a";
 $database = "sampledb";
