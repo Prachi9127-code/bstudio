@@ -9,9 +9,11 @@ $servername = "idiscuss.mysql.database.azure.com";
 $username = "prachi";
 $password = "Pr@chi12a";
 $database = "sampledb";
-
+$conn = mysqli_init();
+mysqli_ssl_set($conn,NULL,NULL, "DigiCertGlobalRootCA.crt.pem", NULL, NULL);
+mysqli_real_connect($conn, $servername, $username, $password, $database, 3306, MYSQLI_CLIENT_SSL);
 // Create a connection
-$conn = mysqli_connect($servername, $username, $password, $database);
+//$conn = mysqli_connect($servername, $username, $password, $database);
 echo "<br>";
 // Die if connection was not successful
 if(!$conn){
