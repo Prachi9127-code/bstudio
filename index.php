@@ -5,7 +5,7 @@ $insert = false;
 $update = false;
 $delete = false;
 
-$servername = "bstudio.mysql.database.azure.com";
+$servername = "idiscuss.mysql.database.azure.com";
 $username = "prachi";
 $password = "Pr@chi12a";
 $database = "sampledb";
