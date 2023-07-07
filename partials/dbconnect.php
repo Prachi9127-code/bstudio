@@ -8,16 +8,10 @@ $database = "sampledb";
 $conn = mysqli_init();
 mysqli_ssl_set($conn,NULL,NULL, "DigiCertGlobalRootCA.crt.pem", NULL, NULL);
 mysqli_real_connect($conn, $servername, $username, $password, $database, 3306, MYSQLI_CLIENT_SSL);
-// $conn = mysqli_connect($servername, $username, $password, $database);
-// if(!$conn){
-// //     echo "success";
-// // }else{
-    if (mysqli_connect_errno($conn)) {
+
+    if (!$conn) {
         die('Failed to connect to MySQL: '.mysqli_connect_error());
     }
-    printf("Connection Established.\n");
-
-
     
     // SQL statements to create tables
 $sql1 = "CREATE TABLE `categories` (
