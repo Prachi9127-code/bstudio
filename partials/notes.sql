@@ -4,4 +4,4 @@ CREATE TABLE `note` (
     `description` text NOT NULL,
     `tstamp` datetime NOT NULL DEFAULT current_timestamp(),
     PRIMARY KEY (`sno`)
-);
+) AUTO_INCREMENT=1;
