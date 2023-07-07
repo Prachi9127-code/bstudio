@@ -1,7 +1,7 @@
 CREATE TABLE `note` (
-    `sno` int(11) NOT NULL AUTO_INCREMENT,
+    `sno` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2,
     `title` varchar(50) NOT NULL,
     `description` text NOT NULL,
     `tstamp` datetime NOT NULL DEFAULT current_timestamp(),
     PRIMARY KEY (`sno`)
-) AUTO_INCREMENT=1;
+);
