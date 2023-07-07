@@ -56,5 +56,5 @@ jobs:
         with:
           app-name: 'app-learn-exercise3'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_11526B7C34FF48D5B0BDE8AF92856B08 }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_B4D8E38C439C46F8B8D8EF569FD70BC4 }}
           package: .
