@@ -24,7 +24,7 @@ mysqli_real_connect($conn, $servername, $username, $password, $database, 3306, M
 
     $res2 = mysqli_query($conn, "SHOW TABLES LIKE 'comment'");
     
-    if (mysqli_num_rows($res1) <= 0) {
+    if (mysqli_num_rows($res2) <= 0) {
         //Create table if it does not exist
         $sql = file_get_contents("comment.sql");
         if(!mysqli_query($conn, $sql)){
@@ -33,7 +33,7 @@ mysqli_real_connect($conn, $servername, $username, $password, $database, 3306, M
     }
     $res3 = mysqli_query($conn, "SHOW TABLES LIKE 'note'");
     
-    if (mysqli_num_rows($res1) <= 0) {
+    if (mysqli_num_rows($res3) <= 0) {
         //Create table if it does not exist
         $sql = file_get_contents("notes.sql");
         if(!mysqli_query($conn, $sql)){
@@ -42,7 +42,7 @@ mysqli_real_connect($conn, $servername, $username, $password, $database, 3306, M
     }
     $res4 = mysqli_query($conn, "SHOW TABLES LIKE 'users'");
     
-    if (mysqli_num_rows($res1) <= 0) {
+    if (mysqli_num_rows($res4) <= 0) {
         //Create table if it does not exist
         $sql = file_get_contents("users.sql");
         if(!mysqli_query($conn, $sql)){
@@ -51,7 +51,7 @@ mysqli_real_connect($conn, $servername, $username, $password, $database, 3306, M
     }
     $res5 = mysqli_query($conn, "SHOW TABLES LIKE 'threads'");
     
-    if (mysqli_num_rows($res1) <= 0) {
+    if (mysqli_num_rows($res5) <= 0) {
         //Create table if it does not exist
         $sql = file_get_contents("threads.sql");
         if(!mysqli_query($conn, $sql)){
