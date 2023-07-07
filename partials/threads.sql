@@ -5,5 +5,5 @@ CREATE TABLE `threads` (
     `thread_cat_id` int(7) NOT NULL,
     `thread_user_id` int(7) NOT NULL,
     `timestamp` datetime NOT NULL DEFAULT current_timestamp(),
-    PRIMARY KEY (`sno`)
+    PRIMARY KEY (`thread_id`)
 );
