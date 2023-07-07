@@ -3,7 +3,7 @@
 //connect to the Database
 $insert = false;
 $update = false;
-$delete = false;
+$delete = false
 
 include 'partials/dbconnect.php';
 
