@@ -1,0 +1,6 @@
+CREATE TABLE `users` (
+    `sno` int(20) NOT NULL,
+    `username` varchar(50) NOT NULL,
+    `password` varchar(255) NOT NULL,
+    `date` datetime NOT NULL DEFAULT current_timestamp()
+);
