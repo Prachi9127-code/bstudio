@@ -36,7 +36,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
         $title = $_POST["title"];
         $description = $_POST["description"];
 
-        $sql = "INSERT INTO `note` (`sno`, `title`, `description`) VALUES ('1', '$title', '$description')";
+        $sql = "INSERT INTO `note` (`title`, `description`) VALUES ('$title', '$description')";
         $result = mysqli_query($conn, $sql);
 
         //Add a new data to the table
