@@ -1,3 +1,4 @@
+
 <?php require 'partials/dbconnect.php' ?>
 <?php require 'partials/navbar.php' ?>
 
@@ -11,6 +12,12 @@
   </head>
   <body>
     <?php 
+    session_start();
+
+    if(!isset($_SESSION['loggedin']) || $_SESSION['loggedin']!=true){
+        header("location: login.php");
+        exit;
+    }
       $id = $_GET['catid'];
       $sql = "SELECT * FROM `categories` WHERE category_id=$id";
       $result = mysqli_query($conn, $sql);
