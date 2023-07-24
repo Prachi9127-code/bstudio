@@ -110,7 +110,7 @@
           $row2 = mysqli_fetch_assoc($result2);
 
           echo '<div class="media">
-                  <img src="/img/user.png" width="39px" class="mr-3" alt="...">
+                  <img src="/Bstudio/img/user.png" width="39px" class="mr-3" alt="...">
                   <div class="media-body">
                     <b>'. $row2['username']. ' at '. $thread_time . '</br></b>
                     <h5 class="mt-0"><a href="specificThread.php?threadId='.$id.'">'.$title.'</a></h5>
