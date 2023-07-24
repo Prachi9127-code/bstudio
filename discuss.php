@@ -41,7 +41,13 @@
         <h1 style="text-align:center">iDiscuss - Categories</h1>
             <div class="row my-4">
               <!-- Fetch all the categories -->
+
                 <?php 
+                session_start();
+
+                if(!isset($_SESSION['loggedin']) || $_SESSION['loggedin']!=true){
+                    echo "<h1> Please login first</h1>";
+                }else{
                 $sql = "SELECT * FROM `categories`";
                 $result = mysqli_query($conn, $sql);
                 while($row = mysqli_fetch_assoc($result)){
@@ -61,6 +67,7 @@
                           </div>
                         </div>';
                 }
+              }
                ?> 
             </div>
     </div>
