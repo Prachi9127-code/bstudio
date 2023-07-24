@@ -1,4 +1,10 @@
 <?php
+session_start();
+
+if(!isset($_SESSION['loggedin']) || $_SESSION['loggedin']!=true){
+    header("location: login.php");
+    exit;
+}
 
 //connect to the Database
 $insert = false;
@@ -98,20 +104,6 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
             </div>
         </div>
     </div>
-    <!-- <nav class="navbar navbar-light navbar-expand-md py-3">
-        <div class="container"><a class="navbar-brand d-flex align-items-center" href="#"><span>iNote</span></a><button
-                class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navcol-1"><span
-                    class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
-            <div id="navcol-1" class="collapse navbar-collapse">
-                <ul class="navbar-nav me-auto">
-                    <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">About</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Contact Us</a></li>
-                </ul><button class="btn btn-primary" type="button">Login</button><button class="btn btn-primary" type="button"
-                    style="border-color: var(--bs-indigo);background: rgb(1,46,113);margin: 5px;">Signup</button>
-            </div>
-        </div>
-    </nav> -->
     <?php require 'partials/navbar.php' ?>
 <?php
     if($insert){
@@ -196,22 +188,18 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
                     </div>
                 </div>
             </div>
-            <div class="row">
-                <div class="col-md-6" style="margin-bottom: 15px;">
-                    <div class="card"><img class="card-img w-100 d-block" src="assets/img/savings.jpeg">
+            <div class="row m-5">
+                <div class="col-md-6">
+                    <div class="card"><img class="card-img w-100 d-block" src="assets/img/rewards.jpeg">
                         <div class="card-img-overlay" style="padding: 24px;">
-                            <!-- <h4>Pay and get paid, hassle-free</h4>
-                            <p>Send and request money with a tap, split bills easily with anyone in 200+ countries.</p><button class="btn btn-primary" type="button">Explore easy payments&nbsp;<i class="fas fa-arrow-right"></i>&nbsp;</button> -->
+                            <h2>Never begin the day until it is finished on paper.</h2>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-6">
                     <div class="card"><img class="card-img w-100 d-block" src="assets/img/rewards.jpeg">
                         <div class="card-img-overlay" style="padding: 24px;">
-                            <h4>Pay and get paid, hassle-free</h4>
-                            <p>Send and request money with a tap, split bills easily with anyone in 200+ countries.</p>
-                            <button class="btn btn-primary" type="button">Explore easy payments&nbsp;<i
-                                    class="fas fa-arrow-right"></i>&nbsp;</button>
+                            <h2>Someone's sitting in the shade today because someone planted a tree a long time ago.</h2>
                         </div>
                     </div>
                 </div>
