@@ -1,5 +1,4 @@
 <?php
-$login = false;
 $showError = false;
 if($_SERVER["REQUEST_METHOD"] == "POST"){
     include 'partials/dbconnect.php';
@@ -13,7 +12,6 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         if($num == 1){
             while($row=mysqli_fetch_assoc($result)){
                 if(password_verify($password , $row['password'])){
-                $login = true;
                 session_start();
                 $_SESSION['loggedin'] = true;
                 $_SESSION['sno'] = $row['sno'];
@@ -40,12 +38,6 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
   <body>
     <?php require 'partials/navbar.php' ?>
     <?php
-    if($login){
-        echo '<div class="alert alert-success alert-dismissible fade show" role="alert">
-        <strong>Success!</strong> You are logged in.
-        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-      </div>';
-    }
     if($showError){
         echo '<div class="alert alert-danger alert-dismissible fade show" role="alert">
         <strong>Error!</strong> ' .$showError.'.
