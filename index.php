@@ -84,7 +84,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                  <form action="/index.php" method="post">
+                  <form action="index.php" method="post">
                     <input type="hidden" name="snoEdit" id="snoEdit">
                     <div class="mb-3">
                         <label for="title">Note Title</label>
