@@ -14,6 +14,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             while($row=mysqli_fetch_assoc($result)){
                 if(password_verify($password , $row['password'])){
                 $login = true;
+                header("location: index.php");
                 session_start();
                 $_SESSION['loggedin'] = true;
                 $_SESSION['sno'] = $row['sno'];
