@@ -13,6 +13,12 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             while($row=mysqli_fetch_assoc($result)){
                 if(password_verify($password , $row['password'])){
                 session_start();
+                    $loggedin = false;
+if(isset($_SESSION['loggedin']) || $_SESSION['loggedin']==true){
+    $loggedin = true;
+}else{
+  $loggedin = false;
+}
                 $_SESSION['loggedin'] = true;
                 $_SESSION['sno'] = $row['sno'];
                 $_SESSION['username'] = $username;
