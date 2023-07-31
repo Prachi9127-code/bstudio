@@ -15,8 +15,6 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                 if(password_verify($password , $row['password'])){
                 $login = true;
                 session_start();
-                $_SESSION['loggedin'] = true;
-                //$_SESSION['sno'] = $row['sno'];
                 $_SESSION['username'] = $username;
                 header("location: index.php");
                 }else{
