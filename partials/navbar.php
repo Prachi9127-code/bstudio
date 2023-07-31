@@ -1,7 +1,7 @@
 <?php require 'partials/dbconnect.php' ?>
 <?php
 session_start();
-$loggedin = false;
+$loggedin = true;
 if(isset($_SESSION['loggedin']) || $_SESSION['loggedin']==true){
     $loggedin = true;
 }else{
